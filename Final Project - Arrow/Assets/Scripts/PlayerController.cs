@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float gravityModifier = 1f;
     public float mouseSensitivity = 1f;
-    public GameObject bullet;
+    public GameObject arrow;
     public Transform firePoint;
     public Transform theCamera;
     public Transform groundCheckpoint;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
                 firePoint.LookAt(theCamera.position + (theCamera.forward * 30f));
             }
 
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Instantiate(arrow, firePoint.position, firePoint.rotation);
             //_ammo.RemoveAmmo();
         }
     }
